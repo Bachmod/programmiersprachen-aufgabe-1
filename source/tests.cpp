@@ -55,7 +55,27 @@ int checksum(int eingabe)
         return quersumme;
         
 
+ }
+
+
+
+int sum_multiples()
+{
+    int summe;
+    summe = 0;
+    for (int i = 0; i < 1001; i++) {
+        if (i % 5 == 0) {
+            summe = summe + i;
+        }
+        if (i % 3 == 0) {
+            summe = summe + i;
+        }
+    
+    std::cout << summe;
+    return summe;
+    
     }
+}
 
 
 
@@ -71,7 +91,7 @@ int checksum(int eingabe)
 //    REQUIRE(gcd(3, 7) == 1);
 //}
 //
-//TEST_CASE("describe_checksum", "[cksum]") {
+//TEST_CASE("describe_checksum", "[ckecksum]") {
 //    REQUIRE(checksum(15) == 6);
 //    REQUIRE(checksum(27) == 9);
 //    REQUIRE(checksum(1425) == 12);
@@ -83,10 +103,11 @@ int checksum(int eingabe)
 
 int main(int argc, char* argv[])
 {
-  std::cout << "Der groeste gemeinsame Teiler ist: ";
+  sum_multiples;
+  std::cout << " Der groeste gemeinsame Teiler ist: ";
   gcd(7,0);
-  std::cout << "Die Quersumme ist ";
-  checksum(25);
+  std::cout << " Die Quersumme ist ";
+  checksum(37);
   //return Catch::Session().run(argc, argv);
   
 }
