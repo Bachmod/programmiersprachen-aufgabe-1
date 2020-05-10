@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_RUNNER
 #include <catch.hpp>
 #include <cmath>
+#include <iostream>
 
 int prim(int n) {
     bool prim = true;
@@ -12,13 +13,11 @@ int prim(int n) {
             break;
         }
     }
-        if (prim == true)
-            std::cout << n << "ist eine Primzahl";
-
-        else
-            std::cout << n << "ist keine Primzahl";
-
-        return 0;
+    if (prim == true)
+        std::cout << n << "ist eine Primzahl";
+    else
+        std::cout << n << "ist keine Primzahl";
+    return 0;
     
 }
 
@@ -37,9 +36,9 @@ TEST_CASE("describe_prim", "[prim]")
 }
 
 
-long main(long argc, char* argv[])
+int main(int argc, char* argv[])
 {
-    prim(8);
+    prim(11);
     return Catch::Session().run(argc, argv);
    
 }
