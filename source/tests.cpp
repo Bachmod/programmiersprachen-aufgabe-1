@@ -2,6 +2,7 @@
 #include <catch.hpp>
 #include <cmath>
 
+
 //Berrechnung des größten gemeinsamen Teilers zweier Zahlen
 int gcd(int a, int b)
 {
@@ -59,23 +60,45 @@ int checksum(int eingabe)
 
 
 
-int sum_multiples()
-{
-    int summe;
-    summe = 0;
+int sum_multiples(){
+
+ int summe;
+ summe = 0;
     for (int i = 0; i < 1001; i++) {
         if (i % 5 == 0) {
             summe = summe + i;
         }
         if (i % 3 == 0) {
             summe = summe + i;
-        }
-    
+            /*std::cout << summe;*/
+        }  
+        
+    }
+
     std::cout << summe;
     return summe;
-    
-    }
 }
+
+
+int sum_multipleszusatz(int counter)
+{
+int summe;
+summe = 0;
+    for (int i = 0; i <= counter; i++) {
+            if (i % 5 == 0) {
+                summe = summe + i;
+            }
+            if (i % 3 == 0) {
+                summe = summe + i;
+            }
+            std::cout << summe;
+            return summe;
+   
+    }
+    std::cout << summe;
+    return summe;
+}
+
 
 
 
@@ -95,20 +118,27 @@ int sum_multiples()
 //    REQUIRE(checksum(15) == 6);
 //    REQUIRE(checksum(27) == 9);
 //    REQUIRE(checksum(1425) == 12);
-//
-//
-//
 //}
 
+//TEST_CASE("describe_sum_multipleszusatz", "[sum_multipleszusatz]") {
+//    REQUIRE(sum_multipleszusatz(3) == 3);
+//    REQUIRE(sum_multipleszusatz(10) == 33);
+//    REQUIRE(sum_multipleszusatz(17) == 75);
+//    REQUIRE(sum_multipleszusatz(155) == 6458);
+
+
+//}
 
 int main(int argc, char* argv[])
 {
-  sum_multiples;
-  std::cout << " Der groeste gemeinsame Teiler ist: ";
-  gcd(7,0);
-  std::cout << " Die Quersumme ist ";
-  checksum(37);
-  //return Catch::Session().run(argc, argv);
+  sum_multiples();
+  //sum_multipleszusatz(365);
+  //std::cout << " Der groeste gemeinsame Teiler ist: ";
+  //gcd(7,0);
+  //std::cout << " Die Quersumme ist ";
+  //checksum(37);
+
+  /*return Catch::Session().run(argc, argv);*/
   
 }
 
